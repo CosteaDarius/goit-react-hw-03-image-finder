@@ -6,7 +6,7 @@ import Button from "./Button";
 import Loader from "./Loader";
 import Modal from "./Modal";
 
-const API_KEY = "47522593-d7c2c1229857c5e8207da38d0"; // 🔥 Înlocuiește cu cheia API de la Pixabay
+const API_KEY = "47522593-d7c2c1229857c5e8207da38d0";
 const BASE_URL = "https://pixabay.com/api/";
 
 const App = () => {
@@ -18,10 +18,10 @@ const App = () => {
   const [error, setError] = useState(null);
 
   const fetchImages = async (query, page) => {
-    if (!query.trim()) return; // 🔹 Evită request-urile fără un query valid
+    if (!query.trim()) return; 
 
     setIsLoading(true);
-    setError(null); // Resetăm eroarea înainte de un nou request
+    setError(null); 
 
     try {
       const response = await axios.get(BASE_URL, {
